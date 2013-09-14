@@ -1,0 +1,282 @@
+body{
+	background: white;
+	margin: 0px;
+	min-width: 1080px;
+}
+
+#head{
+	width: 100%;
+	height: 80px;
+	background: rgb(246, 245, 243);
+	-moz-box-shadow:0 2px 1px #DDDDDD;
+	-webkit-box-shadow:0 2px 1px #DDDDDD;
+	box-shadow:0 2px 1px #DDDDDD;
+	font-family:Arial; 
+}
+
+#addCont, #refreshCont{
+	display: inline-block;
+	background: #1874CD;
+	width: 100px;
+	height: 30px;
+	-moz-box-shadow:0 2px 1px #DDDDDD;
+	-webkit-box-shadow:0 2px 1px #DDDDDD;
+	box-shadow:0 2px 1px #DDDDDD;
+	border-radius: 2px;
+}
+
+.chooseDate{
+	margin:0px 0px 10px 0px;
+}
+
+#searchForm{
+	display: inline-block;
+	
+}
+
+#searchCont{
+	display: inline-block;
+	position: relative;
+	left: 58%;
+}
+
+#search{
+	width:220px;
+}
+
+.today{
+	display: inline-block;
+	border: 1px solid #CFCFCF;
+	box-shadow: 0 0 2px 0 #B5B5B5 inset;
+	border-radius: 3px 3px 3px 3px;
+	padding: 1px 5px;
+}
+
+#currentDay{
+	background-color: #E8E8E8;
+	border-color: #E9E9E9 !important;	
+}
+
+.eventDay{
+	background-color: #BDEDFC;
+}
+
+.chooseMonth{
+	margin:20px 0px 0px 0px;
+	display: inline-block;
+}
+
+.chooseDay{
+	background:#E8F0FF;
+	border-color: #7FC7FF;
+    border-width: 1px;
+    -moz-box-shadow: 0 0 0 1px #8AC0E9; /* Для Firefox */
+    -webkit-box-shadow: 0 0 0 1px #8AC0E9; /* Для Safari и Chrome */
+    box-shadow: 0 0 0 1px #8AC0E9; /* Параметры тени */
+    position: relative;
+    z-index: 9999;
+}
+
+#addCont{
+	margin: 30px 5px 0 50px;
+}
+
+#refreshCont{
+	margin: 30px 0 0 5px;
+}
+
+#add, #refresh{
+	color: white;
+	margin: 5px 15px;
+	text-shadow: 0 1px 0 black;
+}
+
+.body{
+	margin: 0 auto;
+    width: 1080px;
+    font-family: Arial;
+    font-size: 10pt;
+}
+
+table{
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+}
+
+tbody{
+	background: white;
+}
+
+td{
+	display: inline-block;
+	border: 1px solid #EBEBEB;
+	height:30px;
+	width:150px;
+	height: 150px;
+	
+}
+
+td > p {
+	margin: 5px 0 0 10px;
+}
+
+#leftMonth{
+	background: url("img/left.png") no-repeat #ffffff;
+	display: inline-block;
+	border-width:1px;
+	border: 1px solid #CFCFCF;
+	height: 15px;
+	width: 15px;
+	margin:0;
+	border-radius: 3px;
+	box-shadow:inset 0 0 2px 0 #B5B5B5;
+}
+
+#rightMonth{
+	background: url(img/right.png) no-repeat #ffffff;
+	display: inline-block;
+	border: 1px solid #CFCFCF;
+	height: 15px;
+	width: 15px;
+	margin:0;
+	border-radius: 3px;
+	box-shadow:inset 0 0 2px 0 #B5B5B5;
+}
+
+#currentMonth{
+	display: inline-block;
+	margin:0;
+	padding: 0px 0px 0px 5px;
+}
+
+.addButtonPopup {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #D2D2D2;
+    box-shadow: 0 0 10px #D2D2D2;
+    height: 90px;
+    left: 50px;
+    position: relative;
+    top: 15px;
+    width: 350px;
+}
+
+#addButtonPopupForm {
+    margin: 20px 0 0 20px;
+}
+
+#addButtonPopupForm > textarea {
+    width: 300px;
+    height: 10pt;
+    resize:none;
+}
+.addButtonPopup > p{
+	border: 1px solid #A6A6A6;
+    border-radius: 3px 3px 3px 3px;
+    display: inline-block;
+    font-size: 8pt;
+    padding: 1px 5px;
+    background: linear-gradient(bottom, #F4F4F4, #FFF);
+	background: -moz-linear-gradient(bottom, #F4F4F4, #FFF);
+	background:-webkit-linear-gradient(bottom, #F4F4F4, #FFF);
+	background: -o-linear-gradient(bottom, #F4F4F4, #FFF);
+	background: -ms-linear-gradient(bottom, #F4F4F4, #FFF);
+	margin:10px 0px 0px 20px;
+}
+
+.closeButtonPopup {
+    background: url("img/exit.png") repeat scroll 0 0 transparent;
+    float: right;
+    height: 10px;
+    margin: 5px 5px 0 0;
+    width: 9px;
+}
+
+.addButtonPopupTriangle	{
+	width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #FFFFFF;
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+}
+
+
+
+.tableAddEvent{
+	position: absolute;
+	height: 410px;
+	width: 350px;
+	border:1px solid;
+	background: #ffffff;
+	border: 1px solid #D2D2D2;
+    box-shadow: 0 0 10px #D2D2D2;
+}
+
+#tableAddEventForm > input {
+    display: block;
+    width: 300px;
+    resize:none;
+    height:10pt;
+}
+
+#tableAddEventFormEvent {
+    margin: 20px 0 5px 20px;
+}
+
+#tableAddEventFormDate {
+    margin: 0 0 5px 20px;
+}
+
+#tableAddEventFormMember {
+    margin: 0 0 50px 20px;
+}
+
+#tableAddEventFormDescription {
+    height: 200px;
+    width: 300px;
+    margin: 0 0 0 20px;
+    height: 200px !important;
+    resize:none;
+}
+
+.tableAddEvent > p{
+	background: -moz-linear-gradient(center bottom , #F4F4F4, #FFFFFF) repeat scroll 0 0 transparent;
+    border: 1px solid #A6A6A6;
+    border-radius: 3px 3px 3px 3px;
+    display: inline-block;
+    font-size: 8pt;
+    margin: 20px 0 0 20px;
+    padding: 1px 5px;
+}
+.tableAddEventDelete{
+	margin-left:10px !important;
+}
+
+.tableAddEventTriangle {
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #FFFFFF;
+    border-top: 15px solid transparent;
+    height: 0;
+    position: absolute;
+    right: 345px;
+    top: 50px;
+    width: 0;
+}
+
+.tableAddEventClose, .searchEnd{
+	background: url("img/exit.png") repeat scroll 0 0 transparent;
+    float: right;
+    height: 10px;
+    margin: 5px 5px 0 0;
+    width: 9px;
+}
+
+.searchEnd{
+	position: relative;
+	display: inline-block;
+	right: 11px;
+	top: 2px;
+}
