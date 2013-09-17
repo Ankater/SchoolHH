@@ -1,4 +1,3 @@
-
 var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 var monthsName = ["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
 var monthsNameSearch = ["Января","Февраля","Марта","Апреля","Мая","Июня","Июля","Августа","Сентября","Октября","Ноября","Декабря"];
@@ -75,7 +74,7 @@ window.onload = function(){
 		$(".tableAddEvent").append("<div class='tableAddEventTriangle'></div>");
 		$(".tableAddEvent").append("<form id='tableAddEventForm'></form>");
 		$("#tableAddEventForm").append("<input type='search' id='tableAddEventFormEvent' placeholder='Событие'>");
-		$("#tableAddEventForm").append("<input type='search' id='tableAddEventFormDate' placeholder='День, месяц, год'>");
+		$("#tableAddEventForm").append("<input type='search' id='tableAddEventFormDate' placeholder='День/месяц/год'>");
 		$("#tableAddEventForm").append("<input type='search' id='tableAddEventFormMember' placeholder='Имена участников'>");
 		$("#tableAddEventForm").append("<textarea  id='tableAddEventFormDescription' placeholder='Описание'></textarea>");
 		$(".tableAddEvent").append("<p class='tableAddEventReady'>Готово</p>");
@@ -89,13 +88,18 @@ window.onload = function(){
 	$(".body").on('click','.tableAddEventReady', function(){
 		addEvent=$("#tableAddEventFormEvent").val();
 		addDate=$("#tableAddEventFormDate").val();
-		addMember=$("#tableAddEventFormMember").val();
-		addedDiscription=$("#tableAddEventFormDescription").val();
-		if((addEvent=="")||(addDate=="")||(addMember=="")||(addedDiscription=="")){
-			alert("Вы не заполнили одно из полей. Пожалуйста заполните его.")
+		var myDate = new Date(addDate)
+		if ('Invalid Date' == myDate) {
+		    alert("Это не дата: " + addDate + " Пожалуйста проверьте, правильность написания и формат даты");
 		}else{
-			localStorage.setItem("d"+addedDay+"m"+choosenMonth+"y"+choosenYear, addEvent+'_'+addDate+'_'+addMember+'_'+addedDiscription);
-			alert("Событие добавлено");
+			addMember=$("#tableAddEventFormMember").val();
+			addedDiscription=$("#tableAddEventFormDescription").val();
+			if((addEvent=="")||(addDate=="")||(addMember=="")||(addedDiscription=="")){
+				alert("Вы не заполнили одно из полей. Пожалуйста заполните его.")
+			}else{
+				localStorage.setItem("d"+addedDay+"m"+choosenMonth+"y"+choosenYear, addEvent+'_'+addDate+'_'+addMember+'_'+addedDiscription);
+				alert("Событие добавлено");
+			}
 		}
 	})
 	$(".body").on('click','.tableAddEventDelete', function(){
